@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Time!</title>
+    <!--Ulkit-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Start Div-->
+    <div class="uk-child-width-5-6@m uk-grid-small uk-grid-match" uk-grid id="start">
+        <div class="uk-card uk-card-default uk-card-body">
+            <h1 class="uk-card-title">Test Your General Knowledge!</h1>
+            <p>Press the start button to begin. You will only have 60 seconds to finish this quiz!. Any wrong answer
+                will deduct 5 seconds from your final score. Have fun!</p>
+            <br>
+            <button class="uk-button uk-button-secondary" id="startbtn">Start</button>
+        </div>
+    </div>
+    <!--Hidden Div - Questions-->
+    <div class="uk-child-width-5-6@m uk-grid-small uk-grid-match" uk-grid id="questions" style="display:none">
+        <div class="uk-card uk-card-default uk-card-body">
+            <progress id="timer" class="uk-progress" value="0" max="60"></progress>
+            <p class="uk-card-title" id="showQuestion">Questions</p>
+            <div id="showOptions">
+                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-capitalize" onclick="checkAnswer('A')" id="A"></button>
+                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-capitalize" onclick="checkAnswer('B')" id="B"></button>
+                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-capitalize" onclick="checkAnswer('C')" id="C"></button>
+                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-capitalize" onclick="checkAnswer('D')" id="D"></button>
+                <div id="showAnswer"> </div>
+            </div>
+            <br>
+            <div>
+                <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" id="score"></button>
+            </div>
+        </div>
+    </div>
+    <div class="uk-child-width-5-6@m uk-grid-small uk-grid-match" id="results" style="display:none">
+        <div class="uk-card uk-card-default uk-card-body uk-width-flex">
+        <h1 class="uk-text-center uk-heading-line uk-card-title">Final Score!</h1>
+        <h1 id="showResults">Score</h1>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+<script src="SCRIPT.js"></script>
+
+</html>
